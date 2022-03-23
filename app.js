@@ -15,7 +15,7 @@ const multer = require("multer");
 var app=express();
 app.use(express.json());
 
-const uri = Process.env.uri;
+const uri = Process.env.uri||'mongodb+srv://divyraj:19992000.Dr@cluster0.pv8ur.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 app.use('/routes/user/',rout);
 app.use('/routes/friend/',user_interaction);
 app.use('/routes/post/',interaction);
